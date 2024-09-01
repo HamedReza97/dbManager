@@ -106,10 +106,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    if(db.isOpen()) db.close();
-    delete frmNotification;
-    delete lblNotification;
-    delete lblNotifFrom;
+    // if(db.isOpen()) db.close();
+    // delete frmNotification;
+    // delete lblNotification;
+    // delete lblNotifFrom;
     delete ui;
 }
 

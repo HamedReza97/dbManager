@@ -45,7 +45,7 @@ padding: 10px 10px 10px 10px;
        </font>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="pageLogin">
        <layout class="QGridLayout" name="gridLayout">
@@ -130,7 +130,7 @@ padding: 10px 10px 10px 10px;
              </font>
             </property>
             <property name="text">
-             <string>hamed</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -160,7 +160,7 @@ padding: 10px 10px 10px 10px;
              </font>
             </property>
             <property name="text">
-             <string>9707</string>
+             <string/>
             </property>
             <property name="echoMode">
              <enum>QLineEdit::EchoMode::Password</enum>
@@ -482,7 +482,7 @@ color: rgb(255, 193, 56); background-color: transparent
            <attribute name="title">
             <string>Manage Users</string>
            </attribute>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>20</x>
@@ -679,7 +679,7 @@ color: rgb(255, 193, 56); background-color: transparent
        </layout>
       </widget>
       <widget class="QWidget" name="tablesAndColumns">
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
