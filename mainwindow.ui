@@ -1,0 +1,2255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1080</width>
+    <height>740</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+padding: 5px 5px 5px 5px;
+border-radius: 5px;
+}
+QPushButton{
+padding: 10px 10px 10px 10px;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_19">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <family>Vazir Code</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="pageLogin">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <spacer name="verticalSpacer_2">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="2">
+         <spacer name="horizontalSpacer">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>UserName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="edtUsername">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>hamed</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Password</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="edtPassword">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>9707</string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::EchoMode::Password</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="1">
+         <spacer name="verticalSpacer">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="btnLogin">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>HostName</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="edtHostname">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>localhost</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="1">
+         <widget class="QPushButton" name="btnCreateUser">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+color: rgb(255, 193, 56); background-color: transparent
+}</string>
+          </property>
+          <property name="text">
+           <string>Create new</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="dbAndUser">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Manage Databases</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <family>Vazir Code</family>
+                  <pointsize>20</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Databases List</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="font">
+                 <font>
+                  <family>Vazir Code</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>A list of all databases. It includes the database size and number of tables. Double click on database name to view tables and columns. New database can be created using the form below the databases list.</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="dbTable">
+                <property name="font">
+                 <font>
+                  <family>Vazir Code</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">    QTableWidget::item {
+        text-align: center;
+    }</string>
+                </property>
+                <property name="editTriggers">
+                 <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                </property>
+                <property name="tabKeyNavigation">
+                 <bool>false</bool>
+                </property>
+                <property name="showDropIndicator" stdset="0">
+                 <bool>false</bool>
+                </property>
+                <property name="dragDropOverwriteMode">
+                 <bool>false</bool>
+                </property>
+                <property name="selectionBehavior">
+                 <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_15">
+                <property name="font">
+                 <font>
+                  <family>Vazir Code</family>
+                  <pointsize>20</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Create Database</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_16">
+                <property name="font">
+                 <font>
+                  <family>Vazir Code</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>This part allowing you to create a database with a username and manually set password. </string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <item>
+                 <widget class="QLabel" name="label_12">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Database Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="edtDbName">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_13">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>User Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="edtDBUser">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_14">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Password</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="edtDBUserPass">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btnCreateDB">
+                  <property name="font">
+                   <font>
+                    <family>Vazir Code</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Create</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Manage Users</string>
+           </attribute>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>991</width>
+              <height>601</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_17">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_28">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>20</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Users List</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_40">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>A list of all users. It includes the user name, password and host name. New user can be created using the form below the users list.</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTableWidget" name="tblUsersList">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">    QTableWidget::item {
+        text-align: center;
+    }</string>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::EditTrigger::DoubleClicked</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="showDropIndicator" stdset="0">
+                <bool>false</bool>
+               </property>
+               <property name="dragDropOverwriteMode">
+                <bool>false</bool>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_39">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>20</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Create New User</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_36">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>This part allowing you to create a new user with a username, password and host name. </string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QLabel" name="label_79">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>User Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="edtUserName">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_18">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Password</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="edtUserPassword">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_82">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Host Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="edtUserHost">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnCreateNewUser">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Create User</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tablesAndColumns">
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1051</width>
+          <height>671</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>15</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="lbldbName">
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>20</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Tables List</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Double click on table names to edit</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>New</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="edtAddtbl">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnAddtbl">
+               <property name="font">
+                <font>
+                 <family>Vazir Code</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tblList">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnBackDb">
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Back to Databases</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,3,1">
+           <property name="spacing">
+            <number>15</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="lblTableName">
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>20</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Table: ?</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>After editing done, click on generate query and execute after query generated. For deleting column, simply select row and click on delete selected rows.</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="opTable">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Vazir Code</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="dragDropOverwriteMode">
+              <bool>false</bool>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectionBehavior::SelectItems</enum>
+             </property>
+             <property name="textElideMode">
+              <enum>Qt::TextElideMode::ElideMiddle</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Query</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="edtQuery">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnGenQuery">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Generate Query</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnDelRow">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Delete Selected Rows</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnExecuteQuery">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Execute Query</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="font">
+                  <font>
+                   <family>Vazir Code</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="dbDetailPage">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Manage Database</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>450</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBackDb2">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Back to Databases</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnTables">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Tables and Columns</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_29">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>18</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Owerview</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Detailed information about the database.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Database Name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblDbName">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&amp;Database Name</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_6">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_21">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Default Collation</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbCollation"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_7">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_23">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Default Charset</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblCharset">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&amp;Charset</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_8">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_26">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Size</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblSize">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&amp;Size</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_9">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_27">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Tables</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblTables">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&amp; Tables</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_5">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_31">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>User Access</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_30">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>A list of users that can access this database with a summary of privileges for database access. Action privileges can be used to check or update privileges. Other existing users can be granted access to this database using the form below the list.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tblDbUsers">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+          </property>
+          <property name="tabKeyNavigation">
+           <bool>false</bool>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="dragDropOverwriteMode">
+           <bool>false</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_32">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Grant access for additional user</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="2,1,0">
+          <item>
+           <widget class="QComboBox" name="cbUsersList">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAccess">
+            <property name="text">
+             <string>Grant Access</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>400</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_33">
+          <property name="font">
+           <font>
+            <family>Vazir Code</family>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>The user will be granted all available privileges</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_10">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QPushButton" name="btnImportDb">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Import</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnExportDb">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Export</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>600</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="userDetailPage">
+       <layout class="QVBoxLayout" name="verticalLayout_40">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QLabel" name="label_22">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Manage User</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>450</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnBackDb2_2">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Back to Databases</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnUsers">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Back to Users</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_13">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <item>
+           <widget class="QLabel" name="label_38">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>18</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Owerview</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_20">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Detailed information about the database.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_12">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,0,1,2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_24">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Database Name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblDbName_2">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&amp;Database Name</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_14">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_25">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>User Name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lblUserName">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>16</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&amp;UserName</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_18">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_39">
+          <item>
+           <widget class="QLabel" name="label_35">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>18</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>User Access</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_34">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Action privileges can be used to check or update privileges.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_36">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chFullAccess">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>FULL ACCESS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_35">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_32">
+            <property name="spacing">
+             <number>20</number>
+            </property>
+            <item>
+             <widget class="QCheckBox" name="chAlter">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>ALTER</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chCreate">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>CREATE</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chCreateR">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>CREATE ROUTINE</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chCreateTT">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>CREATE TEMPORARY TABLES</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chCreateView">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>CREATE VIEW</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chDelete">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>DELETE</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chDeleteH">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>DELETE HISTORY</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chDrop">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>DROP</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chEvent">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>EVENT</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chIndex">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>INDEX</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_33">
+            <property name="spacing">
+             <number>20</number>
+            </property>
+            <item>
+             <widget class="QCheckBox" name="chInsert">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>INSERT</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chLookTable">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>LOCK TABLES</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chReferences">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>REFERENCES</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chSelect">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>SELECT</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chShowCR">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>SHOW CREATE ROUTINE</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chShowView">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>SHOW VIEW</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chTriggers">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>TRIGGER</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chUpdate">
+              <property name="font">
+               <font>
+                <family>Vazir Code</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>UPDATE</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QPushButton" name="btnSetPrivileges">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Set Privileges</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnRevokeAll">
+            <property name="font">
+             <font>
+              <family>Vazir Code</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Revoke All Privileges</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>600</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1080</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionUndo_Query"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="toolTip">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionUndo_Query">
+   <property name="text">
+    <string>Undo Query</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>edtDbName</tabstop>
+  <tabstop>edtDBUser</tabstop>
+  <tabstop>edtDBUserPass</tabstop>
+  <tabstop>btnCreateDB</tabstop>
+  <tabstop>btnCreateUser</tabstop>
+  <tabstop>tblList</tabstop>
+  <tabstop>edtAddtbl</tabstop>
+  <tabstop>btnAddtbl</tabstop>
+  <tabstop>opTable</tabstop>
+  <tabstop>edtQuery</tabstop>
+  <tabstop>btnExecuteQuery</tabstop>
+  <tabstop>btnGenQuery</tabstop>
+  <tabstop>btnDelRow</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>dbTable</tabstop>
+  <tabstop>edtUsername</tabstop>
+  <tabstop>edtPassword</tabstop>
+  <tabstop>edtHostname</tabstop>
+  <tabstop>btnLogin</tabstop>
+  <tabstop>btnBackDb</tabstop>
+  <tabstop>btnTables</tabstop>
+  <tabstop>btnBackDb2</tabstop>
+  <tabstop>tblDbUsers</tabstop>
+  <tabstop>cbUsersList</tabstop>
+  <tabstop>btnExportDb</tabstop>
+  <tabstop>btnImportDb</tabstop>
+  <tabstop>cbCollation</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>edtAddtbl</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnAddtbl</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtUsername</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>542</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>414</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtPassword</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>567</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>579</x>
+     <y>418</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtHostname</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>548</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>550</x>
+     <y>414</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtUserName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnCreateNewUser</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>645</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1022</x>
+     <y>651</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtUserPassword</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnCreateNewUser</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>571</x>
+     <y>655</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>660</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtUserHost</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnCreateNewUser</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>785</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>660</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
