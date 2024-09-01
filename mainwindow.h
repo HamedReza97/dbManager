@@ -142,9 +142,6 @@ private:
     QSqlQueryModel qmTables,qmColumns;
     QProcess terminal;
     QHash<int, QStringList> cmList, lastEdit;
-    QFrame *frmNotification;
-    QLabel *lblNotification, *lblNotifFrom;
-    QVBoxLayout *notifLayout;
     QList<int> preRowTbl;
     int preRow, preColumn;
     bool tblChanged; 

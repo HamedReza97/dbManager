@@ -27,17 +27,6 @@ MainWindow::MainWindow(QWidget *parent)
     }
     ui->stackedWidget->setCurrentIndex(0);
 
-    frmNotification = new QFrame(this);
-    frmNotification->setHidden(true);
-    QVBoxLayout *notifLayout = new QVBoxLayout(frmNotification);
-    frmNotification->setLayout(notifLayout);
-    lblNotification = new QLabel("Test",this);
-    lblNotifFrom = new QLabel("test", this);
-    lblNotification->setFont(QFont("Vazir",12,400));
-    lblNotifFrom->setFont(QFont("Vazir",9,400));
-    notifLayout->addWidget(lblNotification);
-    notifLayout->addWidget(lblNotifFrom);
-
     ui->tblList->horizontalHeader()->hide();
     ui->tblList->verticalHeader()->hide();
     ui->opTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -106,50 +95,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    // if(db.isOpen()) db.close();
-    // delete frmNotification;
-    // delete lblNotification;
-    // delete lblNotifFrom;
     delete ui;
-}
-
-
-void MainWindow::showNotification(const QString &text, const QString &from, NotifType type)
-{
-    lblNotification->setText(text);
-    lblNotifFrom->setText(from);
-    lblNotification->adjustSize();
-    lblNotifFrom->adjustSize();
-    QString frmStyleSheet;
-    switch(type)
-    {
-
-    case Error:
-        frmStyleSheet = "background-color: rgba(255,0,0,.7);"
-                        "color: white;";
-        break;
-    case Warning:
-        frmStyleSheet = "background-color: rgba(100,100,0,0.7);";
-        break;
-    case Info:
-        frmStyleSheet = "background-color: rgba(200,200,200,0.7);";
-        break;
-    case Alarm:
-        frmStyleSheet = "background-color: rgba(100,100,0,0.7);";
-        break;
-    }
-    frmStyleSheet.append("border: 2px solid transparent;"
-                         "padding: 2x 4px 2px 4px;"
-                         "border-radius: 15px;"
-                         "QLabel{"
-                         "color: white;"
-                         "}");
-    frmNotification->setStyleSheet(frmStyleSheet);
-    frmNotification->setGeometry(QRect(5,5,lblNotification->contentsRect().width()+30, lblNotification->contentsRect().height()*5.3));
-    frmNotification->setHidden(false);
-    QTimer::singleShot(3000,[&](){
-        frmNotification->setHidden(true);
-    });
 }
 
 // Database operations
@@ -258,8 +204,6 @@ void MainWindow::handleEditIconClick(const QModelIndex &index) {
             ui->tblDbUsers->item(i,1)->setTextAlignment(Qt::AlignCenter);
             ui->tblDbUsers->item(i,2)->setTextAlignment(Qt::AlignCenter);
         }
-
-
 
     }
     ui->cbCollation->blockSignals(true);
@@ -1203,6 +1147,7 @@ void MainWindow::on_btnAccess_pressed()
 
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
+    Q_UNUSED(index);
     QString qry;
     qry = QStringLiteral("SELECT User, Host, authentication_string AS password from mysql.user;");
     if (!query.exec(qry)) {
