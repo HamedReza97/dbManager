@@ -23,17 +23,329 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>DbManager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background: solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(10, 10, 10, 255), stop:1 rgba(20, 20, 25, 255));
+border: none;
+border-radius: 15px;
+}
+
+QScrollArea{
+border: 1px solid transparent;
+border-radius: 20px;
+}
+QPushButton {
+background-color: rgba(255,255,255,10);
+color: #ffffff;
+border: 1px solid transparent;
+border-radius: 12px;
+padding: 10px 20px 10px 20px;
+}
+QPushButton:hover {
+background-color: rgba(255,255,255,20);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,10);
+}
+QPushButton:disabled {
+background-color: #222222;
+color: #666666;
+}
+QPushButton:focus {
+outline: none;
+border: 1px solid #0066FF;
+}
+QListView {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 15px;
+padding: 5px;
+}
+QListView::item {
+border: none;
+padding: 5px;
+margin: 5px;
+color: #ffffff;
+}
+QListView::item:selected {
+background-color: #0066FF;
+border: 1px solid transparent;
+border-radius: 5px;
+color: #ffffff;
+}
+QListView::item:selected:focus {
+border: 1px solid #0066FF;
+}
+QListView::item:hover {
+background-color: rgba(0,102,255,20);
+border: 1px solid transparent;
+border-radius: 5px;
+color: #0066FF;
+}
+QListView::item:disabled {
+color: #666666;
+background-color: #222222;
+}
+QLineEdit {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+min-height: 20px;
+color: #ffffff;
+}
+QLineEdit:focus {
+border: 1px solid #0066FF;
+}
+QLineEdit::placeholder {
+color: #666666;
+}
+QLineEdit:disabled {
+background-color: #222222;
+color: #666666;
+border: 1px solid transparent;
+}
+QProgressBar {
+border: 1px solid transparent;
+height: 12px;
+border-radius: 6px;
+background-color: rgba(255,255,255,10);
+text-align: center;
+}
+QProgressBar::chunk {
+background-color: #00DC72;
+border: 1px solid transparent;
+border-radius: 6px;
+}
+QProgressBar::indicator {
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QProgressBar:disabled {
+border: 1px solid transparent;
+background-color: #222222;
+}
+QProgressBar:focus {
+border: 1px solid transparent;
+}
+QCheckBox {
+background-color: transparent;
+color: #ffffff;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QCheckBox::indicator {
+width: 18px;
+height: 18px;
+margin-left: 5px;
+}
+QRadioButton {
+color: #ffffff;
+border: none;
+}
+QRadioButton::indicator {
+width: 15px;
+height: 15px;
+margin-left: 5px;
+}
+QTabWidget &gt; QWidget{
+background-color: none;
+}
+QTabWidget::pane {
+border: 1px solid transparent;
+border-radius: 20px;
+background-color: rgba(255,255,255,10);
+}
+QTabBar::tab {
+color: white;
+border: 1px solid transparent;
+border-bottom-color: rgba(255,255,255,10);
+border-top-left-radius: 15px;
+min-width: 80px;
+border-top-right-radius: 15px;
+padding: 6px;
+margin-right: 2px;
+}
+QTabBar::tab:selected {
+background-color: rgba(255,255,255,10);
+border-bottom: 2px solid #00DC72;
+color: white;
+}
+QTabBar::tab:!selected {
+background-color: rgba(255,255,255,20);
+color: #dddddd;
+}
+QTabBar::tab:hover {
+background-color: rgba(255,255,255,30);
+}
+QTabBar::tab:pressed {
+background-color: rgba(255,255,255,10);
+}
+QTabBar::tab:disabled {
+background-color: rgba(255,255,255,30);
+color: #666666;
+}
+QComboBox {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+color: #ffffff;
+}
+QComboBox:hover {
+background-color: rgba(255,255,255,20);
+}
+QComboBox:disabled {
+background-color: rgba(255,255,255,30);
+color: #666666;
+}
+QComboBox:pressed {
+background-color: rgba(255,255,255,10);
+}
+QComboBox QAbstractItemView {
+background: solid transparent;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QComboBox::item {
+padding:5px 0px 5px 0px;
+max-height: 18px;
+}
+QComboBox::item:selected {
+background: solid #0066FF;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QGroupBox {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 15px;
+padding: 10px;
+margin: 20px;
+}
+QGroupBox::title {
+margin-top: -20px;
+subcontrol-position: top;
+padding: 3px 15px 5px 15px;
+color: #ffffff;
+background-color: #222222;
+border: 1px solid transparent;
+border-radius: 10px;
+}
+
+QTableWidget {
+background-color: rgba(255,255,255,10);
+gridline-color: rgba(255,255,255,30);
+border: none;
+border-radius: 15px;
+}
+
+QTableWidget QHeaderView{
+background-color:  transparent;
+}
+
+QHeaderView::section::horizontal {
+background-color:  transparent;
+color: #ffffff;
+padding: 4px;
+}
+QHeaderView::section::vertical {
+background-color:  transparent;
+color: #ffffff;
+padding: 4px;
+}
+
+QTableCornerButton::section {
+background-color: transparent;
+}
+
+QTableWidget::item {
+background-color: rgba(255,255,255,10);
+min-height: 20px;
+border: none;
+}
+
+QTableWidget::item:alternate {
+background-color: rgba(255,255,255,30);
+}
+
+QTableWidget::item:selected {
+border-bottom: 2px solid #00DC72;
+color: white;
+}
+
+QTableWidget::item:hover {
+background-color: rgba(255,255,255,20);
+color: white;
+}
+
+QTableWidget::item QLineEdit{
+background-color: rgba(10,10,10,200);
+padding: 3px;
+border-radius: 0px;
+}
+
+QScrollBar:vertical {
+background-color: transparent;
+width: 10px;
+}
+
+QScrollBar::handle:vertical {
+background-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 5px;
+min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+background-color: transparent;
+}
+
+QScrollBar:horizontal {
+background-color: transparent;
+width: 10px;
+}
+
+QScrollBar::handle:horizontal {
+background-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 5px;
+min-height: 20px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+background-color: transparent;
+}
+
+QLabel{
+background-color: transparent;
+}
+
+QTextEdit {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+min-height: 20px;
+color: #ffffff;
+}
+QTextEdit:focus {
+border: 1px solid #0066FF;
+}
+QTextEdit::placeholder {
+color: #666666;
+}
+QTextEdit:disabled {
+background-color: #222222;
+color: #666666;
+border: 1px solid transparent;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">QLineEdit{
-padding: 5px 5px 5px 5px;
-border-radius: 5px;
-}
-QPushButton{
-padding: 10px 10px 10px 10px;
-}</string>
+    <string notr="true"/>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_19">
     <item>
@@ -45,7 +357,7 @@ padding: 10px 10px 10px 10px;
        </font>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pageLogin">
        <layout class="QGridLayout" name="gridLayout">
@@ -264,9 +576,7 @@ padding: 10px 10px 10px 10px;
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">QPushButton {
-color: rgb(255, 193, 56); background-color: transparent
-}</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Create new</string>
@@ -286,7 +596,7 @@ color: rgb(255, 193, 56); background-color: transparent
            </font>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab">
            <attribute name="title">
@@ -335,11 +645,6 @@ color: rgb(255, 193, 56); background-color: transparent
                   <family>Vazir Code</family>
                   <pointsize>14</pointsize>
                  </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">    QTableWidget::item {
-        text-align: center;
-    }</string>
                 </property>
                 <property name="editTriggers">
                  <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
@@ -782,6 +1087,9 @@ color: rgb(255, 193, 56); background-color: transparent
                <pointsize>14</pointsize>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
             </widget>
            </item>
            <item>
@@ -858,17 +1166,23 @@ color: rgb(255, 193, 56); background-color: transparent
                <pointsize>14</pointsize>
               </font>
              </property>
-             <property name="styleSheet">
-              <string notr="true"/>
+             <property name="frameShape">
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="dragDropOverwriteMode">
               <bool>false</bool>
              </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+             </property>
              <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectionBehavior::SelectItems</enum>
+              <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
              </property>
              <property name="textElideMode">
               <enum>Qt::TextElideMode::ElideMiddle</enum>
+             </property>
+             <property name="cornerButtonEnabled">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -1176,7 +1490,11 @@ color: rgb(255, 193, 56); background-color: transparent
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="cbCollation"/>
+             <widget class="QComboBox" name="cbCollation">
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -2072,14 +2390,13 @@ color: rgb(255, 193, 56); background-color: transparent
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -2091,6 +2408,7 @@ color: rgb(255, 193, 56); background-color: transparent
    </widget>
    <addaction name="menuFile"/>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionUndo">
    <property name="text">
     <string>Undo</string>

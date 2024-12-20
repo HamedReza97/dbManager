@@ -5,5 +5,6 @@
         <file>Icons/tick.svg</file>
         <file>Icons/square.svg</file>
         <file>Icons/edit.svg</file>
+        <file>Icons/down.svg</file>
     </qresource>
 </RCC>

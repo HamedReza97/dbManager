@@ -68,6 +68,10 @@ MainWindow::MainWindow(QWidget *parent)
     }
     }
 
+    QCompleter *completer = new QCompleter(collations, ui->cbCollation);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    ui->cbCollation->setCompleter(completer);
+
     checkboxes.append(ui->chAlter);
     checkboxes.append(ui->chCreate);
     checkboxes.append(ui->chCreateR);
@@ -391,7 +395,7 @@ void MainWindow::delTableIcon(int row){
         if(query.exec()){
             ui->statusbar->showMessage("Table successfully removed",2000);
             edtQuery.clear();
-            ui->opTable->clear();
+            ui->opTable->clearContents();
             connectToDatabase(dbName);
             preRowTbl.clear();
             tblChanged = false;
@@ -401,7 +405,7 @@ void MainWindow::delTableIcon(int row){
             connectToDatabase(dbName);
             ui->tblList->item(row,0)->setBackground(QBrush(QColor(Qt::transparent)));
             preRowTbl.clear();
-            ui->opTable->clear();
+            ui->opTable->clearContents();
             tblChanged = false;
         }
         ui->tblList->blockSignals(false);
@@ -459,9 +463,9 @@ void MainWindow::connectToDatabase(QString databaseName)
     for(int row =0; query.next(); row++)
     {
         QPushButton *button = new QPushButton(QString(""));
-        button->setStyleSheet("QPushButton{background-color: transparent}");
+        button->setStyleSheet("QPushButton{background-color: transparent; border: 1px solid transparent; padding:0px 0px 0px 0px; min-height: 0px}");
         button->setIcon(QIcon(QIcon(":/icons/Icons/trash.svg")));
-        button->setIconSize(QSize(20, 20));
+        button->setIconSize(QSize(16, 16));
         tblList.append(query.value(QStringLiteral("Tables_in_%1").arg(databaseName)).toString());
         ui->tblList->insertRow(row);
         ui->tblList->setItem(row, 0, new QTableWidgetItem(query.value(QStringLiteral("Tables_in_%1").arg(databaseName)).toString()));
@@ -485,12 +489,13 @@ void MainWindow::loadTableSchema(QSqlDatabase &db, const QString &tableName)
         return;
     }
     cmList.clear();
-    ui->opTable->clear();
+    ui->opTable->clearContents();
     ui->opTable->setRowCount(0);
     ui->opTable->setColumnCount(6);
     ui->opTable->setHorizontalHeaderLabels({"Field", "Type", "Null", "Extra", "Key", "Default"});
+    ui->opTable->verticalHeader()->setDefaultAlignment(Qt::AlignCenter);
     ui->opTable->horizontalHeader()->setSectionResizeMode(2,QHeaderView::Fixed);
-    ui->opTable->setColumnWidth(2, 34);
+    ui->opTable->setColumnWidth(2, 42);
     for(int row =0; query.next(); row++)
     {
         ui->opTable->insertRow(row);
@@ -499,7 +504,7 @@ void MainWindow::loadTableSchema(QSqlDatabase &db, const QString &tableName)
 
         if(query.value("Null").toString() == "NO"){
             QTableWidgetItem *check = new QTableWidgetItem();
-            check->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+            // check->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
             check->setCheckState(Qt::Unchecked);
             check->setText("");
             ui->opTable->setItem(row, 2, check);
@@ -507,7 +512,7 @@ void MainWindow::loadTableSchema(QSqlDatabase &db, const QString &tableName)
         else
         {
             QTableWidgetItem *check = new QTableWidgetItem();
-            check->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+            // check->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
             check->setCheckState(Qt::Checked);
             ui->opTable->setItem(row, 2, check);
         }
@@ -515,11 +520,6 @@ void MainWindow::loadTableSchema(QSqlDatabase &db, const QString &tableName)
         ui->opTable->setItem(row, 3, new QTableWidgetItem(query.value("Extra").toString()));
         ui->opTable->setItem(row, 4, new QTableWidgetItem(query.value("Key").toString()));
         ui->opTable->setItem(row, 5, new QTableWidgetItem(query.value("Default").toString()));
-        ui->opTable->item(row,1)->setTextAlignment(Qt::AlignCenter);
-        ui->opTable->item(row,3)->setTextAlignment(Qt::AlignCenter);
-        ui->opTable->item(row,4)->setTextAlignment(Qt::AlignCenter);
-        ui->opTable->item(row,5)->setTextAlignment(Qt::AlignCenter);
-        ui->opTable->update();
 
         cmList[row].append(query.value("Field").toString());
         cmList[row].append(query.value("Type").toString());
@@ -568,7 +568,7 @@ void MainWindow::createNewRow()
     ui->opTable->item(ui->opTable->rowCount()-2,4)->setTextAlignment(Qt::AlignCenter);
     ui->opTable->item(ui->opTable->rowCount()-2,5)->setTextAlignment(Qt::AlignCenter);
     QTableWidgetItem *check = new QTableWidgetItem();
-    check->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
+    check->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     check->setCheckState(Qt::Unchecked);
     check->setText("");
     ui->opTable->setItem(ui->opTable->rowCount()-2, 2, check);
@@ -615,9 +615,9 @@ void MainWindow::on_btnAddtbl_pressed()
         ui->tblList->item(row,0)->setBackground(QBrush(QColor(255,165,0,150)));
 
         QPushButton *button = new QPushButton(QString(""));
-        button->setStyleSheet("QPushButton{background-color: transparent}");
+        button->setStyleSheet("QPushButton{background-color: transparent; border: 1px solid transparent; padding:0px 0px 0px 0px; min-height: 0px}");
         button->setIcon(QIcon(QIcon(":/icons/Icons/trash.svg")));
-        button->setIconSize(QSize(20, 20));
+        button->setIconSize(QSize(16, 16));
         ui->tblList->setIndexWidget(QModelIndex(ui->tblList->model()->index(row,1)), button);
 
         QObject::connect(button, &QPushButton::clicked, this, [row, this]() {
@@ -636,7 +636,7 @@ void MainWindow::on_btnAddtbl_pressed()
 void MainWindow::initialNewTable()
 {
     ui->opTable->blockSignals(true);
-    ui->opTable->clear();
+    ui->opTable->clearContents();
     ui->opTable->setRowCount(1);
     ui->opTable->setColumnCount(6);
     ui->opTable->setHorizontalHeaderLabels({"Field", "Type", "Null", "Extra", "Key", "Default"});
@@ -659,7 +659,7 @@ void MainWindow::initialNewTable()
 
 void MainWindow::on_opTable_cellChanged(int row, int column)
 {
-    if(ui->opTable->item(row,0)->text().isEmpty() || ui->opTable->item(row,1)->text().isEmpty()){
+    if(ui->opTable->item(row, column)->text().isEmpty() && (column == 0 || column == 1)){
         ui->opTable->item(row,column)->setText(preCell);
     }
     if(preCell != ui->opTable->item(row,column)->text()){
@@ -772,26 +772,26 @@ void MainWindow::on_btnGenQuery_pressed()
 
 void MainWindow::on_btnDelRow_pressed()
 {
+    if(QMessageBox::question(this,"Delete Column","Are you sure want to delete selected row(s)?",QMessageBox::Yes,QMessageBox::No) == QMessageBox::Yes)
+    {
     QSet<int> selectedRowIndices;
     QList<QTableWidgetItem*> selectedItems = ui->opTable->selectedItems();
     foreach (QTableWidgetItem* item, selectedItems) {
         selectedRowIndices.insert(item->row());
     }
     foreach (int rowIndex, selectedRowIndices) {
-        edtQuery.append(QStringLiteral("ALTER TABLE %1 DROP COLUMN IF EXISTS %2;").arg(
+        edtQuery = (QStringLiteral("ALTER TABLE %1 DROP COLUMN IF EXISTS %2;").arg(
                        tblName, ui->opTable->item(rowIndex,0)->text()));
-    }
     query.prepare(edtQuery);
-    if(QMessageBox::question(this,"Delete Column","Are you sure want to delete selected row(s)?",QMessageBox::Yes,QMessageBox::No) == QMessageBox::Yes)
-    {
     if(query.exec()){
         ui->statusbar->showMessage("Selected row(s) successfully removed",2000);
         edtQuery.clear();
-        loadTableSchema(db,tblName);
     }
     else{
         ui->statusbar->showMessage(query.lastError().text());
     }
+    }
+    loadTableSchema(db,tblName);
     }
 }
 
